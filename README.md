@@ -2,7 +2,7 @@
 
 A simple web application helping you to manage your favorite marvel heroes.
 
-This is a basic Web Application made using HTML CSS and Vanilla JavaScript. To use this download the repo and simply open 'SuperheroHunter_index.html' file in your browser.
+This is a basic Web Application made using HTML CSS and Vanilla JavaScript. To use this download the repo and simply open 'SuperheroHunter_index.html' file in your browser or visit on - 'https://ghatodep.github.io/Superhero-Hunter/SuperheroHunter_index.html'
 
 Superhero Hunter Web App is based on Marvel API - 'https://developer.marvel.com/docs'. Web App queries all marvel hero information from this API and displays it. It displays photos and names of the superhero along with that also shows the names of the comics these heroes are part of, and many such fun stuff. 
 
