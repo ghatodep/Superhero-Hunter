@@ -1,0 +1,332 @@
+/* 
+App Name  : Superhero Hunter Web App
+Developer : Pushpak Ghatode
+Date      : 20 June 2024
+*/
+
+:root{
+    --border: 1px solid black;
+    --groove-border: 10px groove black;
+    --bg-color-1: white;
+    --bg-color-2: rgb(140, 8, 8);
+    --bg-color-3: grey;
+    --bg-color-4: lightgrey;
+    --color-1: black;
+    --color-2: rgba(245, 245, 245, 0.9);
+    --color-heart: red;
+}
+
+::-webkit-scrollbar {
+    /* display: none; */
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+/* body{} */
+
+/* Styling the header section */
+header{
+    border: var(--border);
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    border-color: var(--bg-color-2);
+}
+
+#header-div-1{
+    display: flex;
+    align-items: center;
+}
+
+#header-div-1 img{
+    height: 80%;
+    margin-left: 0.5rem;
+}
+
+#header-div-1 span{
+    font-size: 1.7rem;
+    font-weight: 800;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.05rem;
+    height: 80%;
+    padding-right: 3px;
+    padding-left: 3px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-family: fantacy;
+    background-color: var(--bg-color-2);
+    color: var(--color-2);
+    text-align: center;
+}
+
+#header-div-2, #header-div-3{
+    display: flex;
+    align-items: center;
+}
+
+.nav-button{
+    height: 80%;
+    aspect-ratio: 1/1;
+    margin: 0 1rem;
+    font-size: 2rem;
+    background-color: var(--bg-color-2);
+    color: var(--color-2);
+}
+
+.nav-button:hover{
+    opacity: 0.7;
+    cursor: pointer;    
+}
+
+#header-div-3{
+    height: 80%;
+    margin-right: 0.5rem;
+}
+
+#search-submit{
+    height: 55%;
+    margin: 0;
+    border-left: 0;
+    outline: none;
+    font-size: 1rem;
+}
+
+#search-text{
+    outline: none;
+    height: 50%;
+    width: 20vw;
+    font-size: 1rem;
+    padding: 0;
+    border-right: 0;
+    padding-left: 0.15rem;
+}
+
+/* Page Name Header section */
+#page-name{
+    margin: 0;
+    border: var(--border);
+}
+
+#page-name h2{
+    margin: 0;
+    padding: 0.25rem;
+    text-align: center;
+    font-family: cursive;
+}
+
+/* Styling the main section */
+
+/* tile styling of home page default list */
+#all-heroes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem;
+    border: var(--border);
+}
+
+.list-tl{
+    /* dimensions of tile */
+    width: 20rem;
+    padding: 0.25rem;
+    padding-right: 0.5rem;
+    /* flex */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     /* other styling */
+    transition: 0.09s;
+    box-shadow: 0px 0px 3px 1px var(--color-1);
+    /* borders of tile */
+    border-radius: 1rem;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+}
+
+.list-tl:hover{
+    transform: scale(1.03);
+}
+
+.list-tl img{
+    border-radius: 50%;
+    height: 5rem;
+    aspect-ratio: 1/1;
+}
+
+.tl-hero-name{
+    font-size: 1.2rem;
+    font-family: cursive;
+    font-weight: 530;
+}
+
+.tl-fav-btn input{
+    display: none;
+}
+
+.tl-fav-btn label{
+    transition: 0.3s;
+    font-size: 1.5rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: var(--color-2);
+}
+
+.tl-fav-btn label:hover{
+    cursor: pointer;
+}
+
+.tl-fav-btn input:checked + label{
+    color: var(--color-heart);
+}
+
+#load-more-btn{
+    font-size: 1rem;
+    padding: 0.25rem;
+    margin: 1rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    background-color: var(--bg-color-4);
+    flex-basis: 100%;
+}
+
+#load-more-btn span{
+    font-weight: bold;
+}
+
+.blue{
+    color: blue;
+}
+
+#load-more-btn:hover{
+    background-color: var(--color-2);
+}
+
+/* search result section styling */
+#search-result{
+    display: none;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem;
+    border: var(--border);
+}
+
+/* my favorite superhero page section styling */
+#my-fav-superhero-page{
+    display: none;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem;
+    border: var(--border);
+}
+
+/* common section styling */
+.count-display{
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0;
+    font-weight: lighter;
+}
+
+.count-display span{
+    font-weight: 900;
+}
+
+/* Individual Superhero page */
+#superhero-page{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border: var(--border);
+    padding: 0.5rem;
+    row-gap: 1rem;
+}
+
+#row-1{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+#hero-img-name-desc{
+    display: flex;
+    gap: 1rem;
+}
+
+#hero-image-container{
+    border: var(--groove-border);
+    height: 12vw;
+    aspect-ratio: 1/1;
+}
+
+#hero-image-container img{
+    height: inherit;
+    aspect-ratio: 1/1;
+}
+
+#name-desc-container{
+    margin-left: 3rem;
+}
+
+#hero-name{
+    font-size: 3rem;
+    font-family: cursive;
+    margin: 0.7rem;
+    margin-left: 0;
+}
+
+#hero-desc{
+    font-size: 1rem;
+    max-width: 50vw;
+    margin-top: 1rem;
+}
+
+#close-info{
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#close-info:hover{
+    opacity: 0.7;
+}
+
+#row-2{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+.detail-box{
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+
+.detail-box-header{
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    border: var(--border);
+    border-color: transparent;
+    border-radius: 0.5rem;
+    background-color: var(--bg-color-3);
+}
+
+.detail-box-info{
+    font-size: 1rem;
+    width: 20rem;
+    aspect-ratio: 2/1.3;
+    overflow: scroll;
+}

@@ -1,0 +1,115 @@
+<!-- 
+App Name  : Superhero Hunter Web App
+Developer : Pushpak Ghatode
+Date      : 20 June 2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super hero Hunter</title>
+    <link href="style1.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/b3348ae33f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+  </head>
+  <body>
+    <!-- The header section -->
+    <header>
+      <div id="header-div-1">
+        <img src="marvel_logo.png" />
+        <span>
+          Super hero<br />
+          <i class="fa-solid fa-gun"></i>Hunter
+        </span>
+      </div>
+      <div id="header-div-2">
+        <button class="nav-button" id="home-btn">
+          <i class="fa-solid fa-house"></i>
+        </button>
+        <button class="nav-button" id="my-fav-superhero-page-btn">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+      <div id="header-div-3">
+        <input
+          type="text"
+          id="search-text"
+          name="search-text"
+          placeholder="Type your search string"
+          autocomplete="off"
+        />
+        <button id="search-submit" class="nav-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </header>
+    <div id="page-name">
+      <h2>
+        Heroes List
+        <!-- to be entered dynamically as user navigates from one page to another. -->
+      </h2>
+    </div>
+    <main>
+      <section id="home-page">
+        <div id="all-heroes">
+          <!-- the list items will be added by JavaScript dynamically -->
+        </div>
+        <div id="search-result">
+          <!-- the search results will be added by JavaScript when search button is clicked -->
+        </div>
+      </section>
+      <section id="superhero-page">
+        <div id="row-1">
+          <div id="hero-img-name-desc">
+            <div id="hero-image-container">
+              <img src="" alt="hero-image" />
+            </div>
+            <div id="name-desc-container">
+              <div id="hero-name"></div>
+              <div id="hero-desc"></div>
+            </div>
+          </div>
+          <div>
+            <button id="close-info">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+          </div>
+        </div>
+        <div id="row-2">
+          <div id="comics-cont" class="detail-box">
+            <div id="comic-head" class="detail-box-header">
+              Comics
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <ul id="comic-names" class="detail-box-info"></ul>
+          </div>
+          <div id="series-cont" class="detail-box">
+            <div id="series-head" class="detail-box-header">
+              Series
+              <i class="fa-solid fa-clapperboard"></i>
+            </div>
+            <ul id="series-names" class="detail-box-info"></ul>
+          </div>
+          <div id="stories-cont" class="detail-box">
+            <div id="stories-head" class="detail-box-header">
+              Stories
+              <i class="fa-solid fa-receipt"></i>
+            </div>
+            <ul id="stories-names" class="detail-box-info"></ul>
+          </div>
+        </div>
+      </section>
+      <section id="my-fav-superhero-page">
+        <!-- list of favorite superheroes will be added here using JavaScript -->
+      </section>
+    </main>
+    <script src="script1.js"></script>
+  </body>
+</html>
